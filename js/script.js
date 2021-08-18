@@ -1,11 +1,19 @@
 "use strict"; //всегда писать
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели", "");
 
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
+for(let i = 0;i < 2; i++){
+    const a = prompt("Один из последних просмотренных фильмов?",""),
+      b = prompt("На сколько оцените его?","");
 
-//Циклы
+    personalMovieDB.movies[a] = b;
+}
 
-//while(uslovie){};
-
-//do{}while(uslovie);
-
-//for(let i = A; i < N; i++){}
+console.log(personalMovieDB);
