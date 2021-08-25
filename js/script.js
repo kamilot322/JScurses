@@ -1,69 +1,28 @@
 "use strict"; //всегда писать
 
-let num = 30;
+const str = "tESt";
+const arr = [1, 2, 4, 6,3];
 
-function showFirstMessage(text) {
-    console.log(text);
-    num = 20;
-    console.log(num);
-}
+//Кол-во символов
+// console.log(str.length);
+// console.log(arr.length);
 
-showFirstMessage("Hello Wolrd!");
-console.log(num);
+//Нельзя менять опеределенный символ в строке,делается с помощью методов
+// console.log(str[2]);
 
-//Не ошибка!
-console.log(calc(4,3));
-console.log(calc(2,5));
-console.log(calc(5,7));
+//Регистры
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
 
+const fruit = "some fruit";
+//Если выводится "-1", то отсутсвует символ или часть строки
+console.log(fruit.indexOf("q"));
 
-function calc(a, b){
-    return(a + b);
-}
+const logg = "Hello world";
+//Вырезка подстроки с n до q, может принимать отрицательные значения, может принимать один аргумент
+console.log(logg.slice(6, 11));
+//Вырезка подстроки тоже самое только без отриц чисел, отриц. число = 0, можно задавать 1-ый аргумент > чем 2-ой
+console.log(logg.substring(6, 11));
+//Вырезка подстроки с n-ой позиции и q элементов
+console.log(logg.substr(6, 5));
 
-//Function declaration
-
-//Не ошибка! Т.к. функция может использоваться до и после создания
-console.log(calc(4,3));
-console.log(calc(2,5));
-console.log(calc(5,7));
-
-function ret(){
-    let num = 50;
-    /*
-    some code
-    some code
-    */
-    return num;
-}
-
-const anotherNum = ret();
-console.log(anotherNum);
-
-//Function exprassion
-
-//Ошибка т.к. функция ещё не была создана,а уже используется
-logger();
-
-//Function exprassion
-const logger = function(){
-    console.log("Hello!");
-};
-logger();
-
-//Стрелочные ф-ции
-
-//Упрощённый вариант
-const calculate = (a, b) => a + b; 
-/*
-"calculate" - название ф-ции
-"= (a, b) =>" - синтаксис стрелочной ф-ции
-"(a, b)" - аргументы ф-ции
-"=>" - говорит о выполнении кода
-*/
-
-//Классический вариант
-const calculate2 = (a, b) => {
-    console.log("Calc2");
-    return a + b;
-};
